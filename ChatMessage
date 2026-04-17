@@ -1,0 +1,34 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "sender_name": {
+      "type": "string",
+      "description": "Name of the person who sent the message"
+    },
+    "sender_email": {
+      "type": "string",
+      "description": "Email of the sender"
+    },
+    "message": {
+      "type": "string",
+      "description": "The message content"
+    },
+    "is_from_admin": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this message is from admin"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "Chat session identifier"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "message"
+  ]
+}
