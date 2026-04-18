@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <link href="https://media.base44.com/images/public/69e06b3922851fc2a5cfd63d/43f14cdbb_fa1b3ad5-a591-4ef0-893d-33825c23039a_large.png" rel="icon" type="image/svg+xml"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="/manifest.json" rel="manifest"/>
+  <title>
+   vite.config.js | KarmaHQ
+  </title>
+  <meta content="Want your brand to gain better AI visibility? Karma HQ helps boost search results with result-oriented Reddit and Quora marketing services." name="description"/>
+  <script crossorigin="" src="/assets/index-CNJyBSfC.js" type="module">
+  </script>
+  <link crossorigin="" href="/assets/index-CyXnIR9E.css" rel="stylesheet"/>
+  <script type="module">
+   if (window.self === window.top) {
+  let lastPath = "";
+  function getPageNameFromPath(path) {
+    const segments = path.split("/").filter(Boolean);
+    return segments[0] || null;
+  }
+  function trackPageView() {
+    const path = window.location.pathname;
+    if (path === lastPath) return;
+    lastPath = path;
+    const pageName = getPageNameFromPath(path) || "home";
+    const appId = "69e06b3922851fc2a5cfd63d";
+    if (!appId) return;
+    fetch(`/app-logs/${appId}/log-user-in-app/${pageName}`, {
+      method: "POST",
+    }).catch(() => {});
+  }
+  const originalPushState = history.pushState.bind(history);
+  history.pushState = function (...args) {
+    originalPushState(...args);
+    trackPageView();
+  };
+  const originalReplaceState = history.replaceState.bind(history);
+  history.replaceState = function (...args) {
+    originalReplaceState(...args);
+    trackPageView();
+  };
+  window.addEventListener("popstate", trackPageView);
+  trackPageView();
+}
+  </script>
+  <meta content="vite.config.js | KarmaHQ " property="og:title"/>
+  <meta content="KarmaHQ is an intelligent community engagement platform that helps you build authentic connections and automate meaningful responses, ensuring your brand grows with integrity and purpose." property="og:description"/>
+  <meta content="https://media.base44.com/images/public/69e06b3922851fc2a5cfd63d/43f14cdbb_fa1b3ad5-a591-4ef0-893d-33825c23039a_large.png/v1/fill/w_1200,h_630/43f14cdbb_fa1b3ad5-a591-4ef0-893d-33825c23039a_large.png" property="og:image"/>
+  <meta content="https://karmahqio.base44.app/vite.config.js" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="KarmaHQ " property="og:site_name"/>
+  <meta content="vite.config.js | KarmaHQ " name="twitter:title"/>
+  <meta content="KarmaHQ is an intelligent community engagement platform that helps you build authentic connections and automate meaningful responses, ensuring your brand grows with integrity and purpose." name="twitter:description"/>
+  <meta content="https://media.base44.com/images/public/69e06b3922851fc2a5cfd63d/43f14cdbb_fa1b3ad5-a591-4ef0-893d-33825c23039a_large.png/v1/fill/w_1200,h_630/43f14cdbb_fa1b3ad5-a591-4ef0-893d-33825c23039a_large.png" name="twitter:image"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <meta content="https://karmahqio.base44.app/vite.config.js" name="twitter:url"/>
+  <meta content="yes" name="mobile-web-app-capable"/>
+  <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+  <meta content="KarmaHQ " name="apple-mobile-web-app-title"/>
+  <link href="https://karmahqio.base44.app/vite.config.js" rel="canonical"/>
+ </head>
+ <body>
+  <div id="root">
+  </div>
+ </body>
+</html>
