@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title id="siteTitle">KarmaHQ – Make Your Brand Rank On AI Search Engines</title>
+<meta name="description" id="siteDesc" content="The only AI search visibility platform with a built-in Engagement Engine. Track rankings, monitor cited conversations and place your brand where it matters."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;900&family=Inter:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;color:#1b181c;background:#fbfaf9;overflow-x:hidden;}
+h1,h2,h3,h4,h5,h6{font-family:'Outfit',sans-serif;}
+a{text-decoration:none;color:inherit;}
+img{max-width:100%;display:block;}
+:root{
+  --orange:#ff5d30;
+  --orange-dark:#e04a1f;
+  --dark:#1b181c;
+  --bg:#fbfaf9;
+  --gray:#46484d;
+  --light:#f6f5f3;
+}
+
+/* ── NAVBAR ── */
+.nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(251,250,249,.96);backdrop-filter:blur(20px);border-bottom:1px solid rgba(70,72,77,.08);}
+.nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;}
+.nav-logo{display:flex;align-items:center;gap:10px;font-family:'Outfit',sans-serif;font-size:20px;font-weight:900;color:#1b181c;}
+.logo-k{width:32px;height:32px;background:var(--orange);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:15px;}
+.logo-hq{color:var(--orange);}
+.nav-links{display:flex;align-items:center;gap:32px;}
+.nav-links a{font-size:14px;font-weight:500;color:#46484d;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:#1b181c;}
+.nav-cta-group{display:flex;align-items:center;gap:12px;}
+.btn-login{font-size:14px;font-weight:500;color:#46484d;background:none;border:none;cursor:pointer;transition:color .2s;}
+.btn-login:hover{color:#1b181c;}
+.btn-primary{background:var(--orange);color:#fff;border:none;padding:10px 22px;border-radius:999px;font-size:14px;font-weight:700;cursor:pointer;transition:all .2s;white-space:nowrap;font-family:'DM Sans',sans-serif;}
+.btn-primary:hover{background:var(--orange-dark);transform:translateY(-1px);}
+.btn-outline{background:transparent;color:#1b181c;border:1.5px solid rgba(70,72,77,.25);padding:10px 22px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.btn-outline:hover{border-color:#1b181c;}
+.mob-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:#46484d;}
+.mob-menu{display:none;position:fixed;top:68px;left:0;right:0;background:#fbfaf9;border-bottom:1px solid rgba(70,72,77,.1);z-index:998;padding:16px 24px 24px;}
+.mob-menu.open{display:block;}
+.mob-menu a{display:block;padding:12px 0;border-bottom:1px solid rgba(70,72,77,.08);font-size:15px;font-weight:500;color:#46484d;}
+.mob-menu-btns{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:#fbfaf9;position:relative;overflow:hidden;padding-top:68px;}
+.hero-bg-dots{position:absolute;inset:0;background-image:radial-gradient(circle,rgba(70,72,77,.12) 1px,transparent 1px);background-size:28px 28px;pointer-events:none;}
+.hero-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:500px;background:radial-gradient(ellipse,rgba(255,93,48,.12) 0%,transparent 70%);pointer-events:none;}
+.hero-inner{position:relative;z-index:10;text-align:center;padding:0 24px;max-width:780px;margin:0 auto;}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid rgba(70,72,77,.12);border-radius:10px;padding:5px 18px;font-size:12px;font-weight:500;color:#46484d;margin-bottom:36px;box-shadow:0 0 40px rgba(169,169,169,.06);}
+.hero h1{font-family:'Outfit',sans-serif;font-size:clamp(44px,7vw,80px);font-weight:900;line-height:1.05;letter-spacing:-2px;color:#1b181c;margin-bottom:12px;}
+.hero h1 em{font-style:italic;color:var(--orange);}
+.hero-sub{font-size:18px;color:#46484d;margin-bottom:40px;line-height:1.7;max-width:560px;margin-left:auto;margin-right:auto;}
+.hero-btns{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px;margin-bottom:40px;}
+.hero-social-proof{display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;color:#46484d;}
+.hero-avatars{display:flex;}
+.hero-avatars span{width:28px;height:28px;border-radius:50%;border:2px solid #fbfaf9;background:var(--orange);display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700;margin-left:-8px;}
+.hero-avatars span:first-child{margin-left:0;}
+
+/* Floating card */
+.hero-card{position:absolute;bottom:80px;left:5%;background:rgba(249,111,75,.2);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:8px;backdrop-filter:blur(64px);display:none;}
+@media(min-width:900px){.hero-card{display:block;}}
+.hero-card-inner{background:var(--orange);border-radius:20px;padding:16px;color:#fff;min-width:280px;box-shadow:0 16px 40px rgba(88,92,95,.16);}
+.hero-card-inner h4{font-size:14px;font-weight:700;margin-bottom:4px;}
+.hero-card-inner p{font-size:12px;opacity:.8;line-height:1.5;}
+
+/* ── LOGOS STRIP ── */
+.logos-section{background:#fbfaf9;padding:24px 0 48px;border-bottom:1px solid rgba(70,72,77,.08);}
+.logos-track{display:flex;align-items:center;gap:48px;animation:marq 30s linear infinite;white-space:nowrap;}
+.logos-wrap{overflow:hidden;display:flex;}
+.logo-item{display:flex;align-items:center;gap:8px;flex-shrink:0;opacity:.5;transition:opacity .2s;filter:grayscale(1);}
+.logo-item:hover{opacity:1;filter:none;}
+.logo-item img{height:22px;object-fit:contain;}
+.logo-item span{font-size:15px;font-weight:700;color:#1b181c;}
+@keyframes marq{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
+
+/* ── SECTIONS COMMON ── */
+.section{padding:96px 24px;}
+.container{max-width:1100px;margin:0 auto;}
+.container-sm{max-width:936px;margin:0 auto;}
+.sec-badge{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid rgba(70,72,77,.12);border-radius:8px;padding:4px 14px;font-size:12px;font-weight:500;color:#46484d;margin-bottom:16px;box-shadow:inset 0 .5px 0 1px rgba(198,198,198,.3);}
+.sec-title{font-family:'Outfit',sans-serif;font-size:clamp(30px,4vw,52px);font-weight:900;color:#1b181c;margin-bottom:12px;letter-spacing:-1.5px;line-height:1.1;}
+.sec-sub{font-size:16px;color:#46484d;line-height:1.7;max-width:600px;}
+.text-center{text-align:center;}
+.mx-auto{margin-left:auto;margin-right:auto;}
+
+/* ── FEATURES GRID ── */
+.features-bg{background:#fbfaf9;}
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;border:1px solid rgba(70,72,77,.1);border-radius:16px;overflow:hidden;}
+.feature-card{background:#fff;padding:32px;transition:background .2s;}
+.feature-card:hover{background:#fafaf7;}
+.feature-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:20px;}
+.feature-card h3{font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:#1b181c;margin-bottom:8px;}
+.feature-card p{font-size:14px;color:#46484d;line-height:1.6;}
+
+/* ── HOW IT WORKS ── */
+.hiw-bg{background:#fff;}
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;}
+.step-card{background:#fbfaf9;border:1px solid rgba(70,72,77,.08);border-radius:20px;padding:28px;transition:all .3s;}
+.step-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(0,0,0,.06);}
+.step-num{width:36px;height:36px;border-radius:10px;background:var(--orange);color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;margin-bottom:16px;font-family:'Inter',sans-serif;}
+.step-card h3{font-family:'Inter',sans-serif;font-size:15px;font-weight:700;color:#1b181c;margin-bottom:8px;}
+.step-card p{font-size:13px;color:#46484d;line-height:1.6;}
+
+/* ── STATS ── */
+.stats-bg{background:#1b181c;}
+.stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(255,255,255,.08);border-radius:16px;overflow:hidden;}
+.stat-item{background:#1b181c;padding:48px 32px;text-align:center;}
+.stat-num{font-family:'Outfit',sans-serif;font-size:52px;font-weight:900;color:#fff;line-height:1;margin-bottom:8px;}
+.stat-num span{color:var(--orange);}
+.stat-label{font-size:14px;color:rgba(255,255,255,.5);}
+
+/* ── TESTIMONIALS ── */
+.testi-bg{background:#fbfaf9;padding:96px 0;overflow:hidden;}
+.marquee-wrap{overflow:hidden;margin-bottom:14px;}
+.marquee-row{display:flex;animation:marq 35s linear infinite;}
+.marquee-row.rev{animation-direction:reverse;}
+.testi-card{flex-shrink:0;width:300px;background:#fff;border:1px solid rgba(70,72,77,.08);border-radius:20px;padding:24px;margin:0 8px;box-shadow:0 2px 16px rgba(0,0,0,.04);}
+.stars{color:#ffc300;font-size:13px;margin-bottom:12px;letter-spacing:1px;}
+.testi-card p{font-size:14px;color:#46484d;line-height:1.65;margin-bottom:18px;}
+.testi-author{display:flex;align-items:center;gap:10px;}
+.testi-av{width:34px;height:34px;border-radius:50%;object-fit:cover;background:var(--orange);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px;}
+.testi-name{font-size:14px;font-weight:700;color:#1b181c;}
+.testi-role{font-size:12px;color:#46484d;}
+
+/* ── PRICING ── */
+.pricing-bg{background:#fff;}
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:800px;margin:0 auto 40px;}
+.plan-card{border:1.5px solid rgba(70,72,77,.12);border-radius:24px;padding:32px;background:#fbfaf9;transition:all .2s;}
+.plan-card.featured{border-color:var(--orange);background:#fff;position:relative;}
+.plan-pop{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:999px;white-space:nowrap;}
+.plan-name{font-family:'Outfit',sans-serif;font-size:22px;font-weight:900;color:#1b181c;margin-bottom:4px;}
+.plan-desc{font-size:12px;color:#46484d;margin-bottom:24px;}
+.plan-features{list-style:none;margin-bottom:24px;}
+.plan-features li{display:flex;align-items:center;gap:8px;font-size:14px;color:#46484d;margin-bottom:8px;}
+.plan-features li::before{content:"✓";color:var(--orange);font-weight:700;flex-shrink:0;}
+.plan-pricing{display:grid;grid-template-columns:1fr 1fr;gap:8px;border-top:1px solid rgba(70,72,77,.08);padding-top:20px;}
+.price-pill{background:rgba(70,72,77,.05);border-radius:10px;padding:8px 12px;font-size:12px;font-weight:600;color:#46484d;}
+.pricing-cta-box{max-width:800px;margin:0 auto;background:#fbfaf9;border:1px solid rgba(70,72,77,.1);border-radius:20px;padding:40px;text-align:center;}
+.pricing-cta-box h3{font-family:'Outfit',sans-serif;font-size:22px;font-weight:900;color:#1b181c;margin-bottom:8px;}
+.pricing-cta-box p{font-size:14px;color:#46484d;margin-bottom:24px;}
+
+/* ── CTA BANNER ── */
+.cta-bg{background:#1b181c;padding:80px 24px;text-align:center;}
+.cta-bg h2{font-family:'Outfit',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:900;color:#fff;margin-bottom:14px;letter-spacing:-1px;}
+.cta-bg p{font-size:16px;color:rgba(255,255,255,.5);margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto;}
+
+/* ── CONTACT ── */
+.contact-bg{background:#fbfaf9;}
+.contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start;max-width:900px;margin:0 auto;}
+.contact-info h3{font-family:'Inter',sans-serif;font-size:20px;font-weight:700;color:#1b181c;margin-bottom:24px;}
+.contact-row{display:flex;align-items:flex-start;gap:14px;margin-bottom:20px;}
+.contact-icon{width:44px;height:44px;background:var(--orange);border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;flex-shrink:0;}
+.contact-info-text small{font-size:12px;color:#46484d;}
+.contact-info-text p{font-size:14px;font-weight:600;color:#1b181c;margin-top:2px;}
+.contact-form-box{background:#fff;border-radius:24px;padding:36px;border:1px solid rgba(70,72,77,.08);box-shadow:0 4px 32px rgba(0,0,0,.04);}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+.form-field{margin-bottom:16px;}
+.form-label{display:block;font-size:13px;font-weight:700;color:#46484d;margin-bottom:6px;}
+.form-ctrl{width:100%;padding:12px 16px;border:1.5px solid rgba(70,72,77,.15);border-radius:12px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;transition:border .2s;background:#fbfaf9;color:#1b181c;}
+.form-ctrl:focus{border-color:var(--orange);background:#fff;}
+.form-textarea{resize:none;height:110px;}
+.plan-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.plan-opt{padding:14px 16px;border:1.5px solid rgba(70,72,77,.15);border-radius:12px;cursor:pointer;background:#fbfaf9;text-align:left;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.plan-opt.active{border-color:var(--orange);background:#fff6f3;}
+.plan-opt-name{font-size:13px;font-weight:700;color:#1b181c;}
+.plan-opt-sub{font-size:11px;color:#46484d;margin-top:2px;}
+.btn-submit{width:100%;padding:15px;font-size:15px;font-weight:700;color:#fff;border:none;border-radius:14px;cursor:pointer;background:linear-gradient(135deg,#ff5d30,#e04a1f);box-shadow:0 6px 20px rgba(255,93,48,.25);transition:all .2s;font-family:'DM Sans',sans-serif;}
+.btn-submit:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(255,93,48,.35);}
+.success-box{text-align:center;padding:40px 20px;}
+.success-icon{width:60px;height:60px;background:#d1fae5;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:26px;}
+
+/* ── FOOTER ── */
+footer{background:#1b181c;color:#fff;padding:64px 24px 32px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;max-width:1100px;margin:0 auto 48px;}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,.4);line-height:1.7;margin:14px 0;}
+.footer-brand a{font-size:13px;color:rgba(255,255,255,.35);display:flex;align-items:center;gap:6px;transition:color .2s;}
+.footer-brand a:hover{color:#fff;}
+.footer-col h4{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.3);margin-bottom:16px;}
+.footer-col ul{list-style:none;}
+.footer-col li{margin-bottom:10px;}
+.footer-col a{font-size:14px;color:rgba(255,255,255,.45);transition:color .2s;}
+.footer-col a:hover{color:#fff;}
+.footer-bot{border-top:1px solid rgba(255,255,255,.06);padding-top:24px;max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
+.footer-bot p{font-size:12px;color:rgba(255,255,255,.25);}
+.footer-bot-links{display:flex;gap:20px;}
+.footer-bot-links a{font-size:12px;color:rgba(255,255,255,.25);transition:color .2s;}
+.footer-bot-links a:hover{color:rgba(255,255,255,.6);}
+
+/* ── CHAT ── */
+.chat-btn{position:fixed;bottom:24px;right:24px;z-index:990;width:52px;height:52px;border-radius:50%;background:var(--orange);border:none;cursor:pointer;box-shadow:0 6px 24px rgba(255,93,48,.4);display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;transition:transform .2s;}
+.chat-btn:hover{transform:scale(1.08);}
+.chat-panel{position:fixed;bottom:88px;right:24px;z-index:989;width:330px;height:490px;background:#fff;border-radius:24px;box-shadow:0 12px 48px rgba(0,0,0,.14);display:none;flex-direction:column;overflow:hidden;border:1px solid rgba(70,72,77,.08);}
+.chat-panel.open{display:flex;}
+.chat-hdr{background:#1b181c;padding:16px;display:flex;align-items:center;gap:12px;}
+.chat-av{width:36px;height:36px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:14px;}
+.chat-hdr-info .chat-name{color:#fff;font-size:14px;font-weight:700;}
+.chat-hdr-info .chat-status{display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(255,255,255,.4);}
+.chat-dot{width:7px;height:7px;background:#01ff0a;border-radius:50%;}
+.chat-cls{margin-left:auto;background:none;border:none;color:rgba(255,255,255,.4);cursor:pointer;font-size:18px;line-height:1;}
+.chat-msgs{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;}
+.chat-msg{max-width:82%;padding:10px 14px;font-size:13px;line-height:1.55;}
+.chat-msg.bot{background:#f6f5f3;color:#46484d;border-radius:18px 18px 18px 4px;align-self:flex-start;}
+.chat-msg.user{background:var(--orange);color:#fff;border-radius:18px 18px 4px 18px;align-self:flex-end;}
+.chat-input-area{border-top:1px solid rgba(70,72,77,.08);padding:14px;}
+.chat-row{display:flex;align-items:center;gap:8px;background:#f6f5f3;border-radius:18px;padding:8px 14px;}
+.chat-inp{flex:1;border:none;background:transparent;font-size:13px;color:#1b181c;outline:none;font-family:'DM Sans',sans-serif;}
+.chat-send{width:30px;height:30px;border-radius:50%;background:var(--orange);border:none;cursor:pointer;color:#fff;font-size:14px;display:flex;align-items:center;justify-content:center;}
+.chat-send:disabled{opacity:.4;cursor:not-allowed;}
+
+/* ── ADMIN PANEL ── */
+#adminModal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;backdrop-filter:blur(4px);}
+#adminModal.open{display:flex;align-items:flex-start;justify-content:flex-end;}
+.admin-panel{background:#fff;width:480px;height:100vh;overflow-y:auto;box-shadow:-8px 0 48px rgba(0,0,0,.15);}
+.admin-hdr{background:#1b181c;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;}
+.admin-hdr h2{font-size:16px;font-weight:800;color:#fff;font-family:'Outfit',sans-serif;}
+.admin-hdr-btns{display:flex;align-items:center;gap:10px;}
+.admin-save-btn{background:var(--orange);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.admin-close-btn{background:rgba(255,255,255,.1);color:#fff;border:none;width:32px;height:32px;border-radius:8px;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;}
+.admin-tabs{display:flex;overflow-x:auto;background:#f6f5f3;border-bottom:1px solid rgba(70,72,77,.1);}
+.admin-tab{flex-shrink:0;padding:12px 18px;font-size:12px;font-weight:600;color:#46484d;border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;font-family:'DM Sans',sans-serif;}
+.admin-tab.active{color:var(--orange);border-color:var(--orange);background:#fff;}
+.admin-body{padding:24px;}
+.admin-section{display:none;}
+.admin-section.active{display:block;}
+.admin-group{margin-bottom:20px;}
+.admin-label{display:block;font-size:12px;font-weight:700;color:#46484d;margin-bottom:6px;text-transform:uppercase;letter-spacing:.05em;}
+.admin-input,.admin-textarea,.admin-select{width:100%;padding:10px 14px;border:1.5px solid rgba(70,72,77,.15);border-radius:10px;font-size:14px;font-family:'DM Sans',sans-serif;outline:none;color:#1b181c;transition:border .2s;background:#fbfaf9;}
+.admin-input:focus,.admin-textarea:focus{border-color:var(--orange);}
+.admin-textarea{resize:vertical;min-height:80px;}
+.admin-img-preview{width:100%;height:120px;object-fit:cover;border-radius:10px;margin-top:8px;border:1px solid rgba(70,72,77,.1);}
+.admin-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.admin-badge{display:inline-block;background:#fff0eb;color:var(--orange);font-size:11px;font-weight:700;padding:3px 10px;border-radius:6px;margin-bottom:14px;}
+.admin-hr{border:none;border-top:1px solid rgba(70,72,77,.1);margin:20px 0;}
+.toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:#1b181c;color:#fff;padding:12px 24px;border-radius:12px;font-size:14px;font-weight:600;z-index:99999;opacity:0;transition:opacity .3s;pointer-events:none;}
+.toast.show{opacity:1;}
+
+/* ── LOCK SCREEN ── */
+#lockScreen{position:fixed;inset:0;background:#fff;z-index:99999;display:flex;align-items:center;justify-content:center;}
+#lockScreen.hidden{display:none;}
+.lock-box{text-align:center;padding:40px;max-width:360px;}
+.lock-box h2{font-family:'Outfit',sans-serif;font-size:24px;font-weight:900;color:#1b181c;margin-bottom:8px;}
+.lock-box p{font-size:14px;color:#46484d;margin-bottom:24px;}
+.lock-input{width:100%;padding:13px 16px;border:1.5px solid rgba(70,72,77,.2);border-radius:12px;font-size:15px;outline:none;font-family:'DM Sans',sans-serif;margin-bottom:12px;color:#1b181c;}
+.lock-input:focus{border-color:var(--orange);}
+.lock-btn{width:100%;padding:13px;background:var(--orange);color:#fff;border:none;border-radius:12px;font-size:15px;font-weight:700;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.lock-err{color:#e04a1f;font-size:13px;margin-top:8px;display:none;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .nav-links,.nav-cta-group{display:none;}
+  .mob-toggle{display:block;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .contact-grid{grid-template-columns:1fr;}
+  .form-row{grid-template-columns:1fr;}
+  .admin-panel{width:100vw;}
+}
+@media(max-width:640px){
+  .hero-btns{flex-direction:column;align-items:stretch;}
+  .hero-btns a,.hero-btns button{text-align:center;}
+  .plan-opts,.plan-pricing{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr 1fr;}
+  .footer-bot{flex-direction:column;align-items:flex-start;}
+  .admin-row{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- ADMIN BUTTON (floating) -->
+<button onclick="openAdmin()" style="position:fixed;bottom:88px;right:24px;z-index:988;background:#1b181c;color:#fff;border:none;width:44px;height:44px;border-radius:12px;cursor:pointer;font-size:18px;box-shadow:0 4px 16px rgba(0,0,0,.2);" title="Admin Panel">⚙️</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast">Changes saved!</div>
+
+<!-- LOCK SCREEN (Admin Password) -->
+<div id="lockScreen">
+  <div class="lock-box">
+    <div style="width:56px;height:56px;background:var(--orange);border-radius:16px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:26px;margin:0 auto 20px;">🔐</div>
+    <h2>Admin Access</h2>
+    <p>Enter the admin password to manage this website.</p>
+    <input class="lock-input" type="password" id="lockInput" placeholder="Enter password..." onkeydown="if(event.key==='Enter')checkLock()"/>
+    <button class="lock-btn" onclick="checkLock()">Unlock Admin →</button>
+    <div class="lock-err" id="lockErr">Incorrect password. Try again.</div>
+    <div style="margin-top:20px;"><a href="#" onclick="hideLock()" style="font-size:13px;color:#46484d;text-decoration:underline;">Continue as visitor →</a></div>
+  </div>
+</div>
+
+<!-- ADMIN MODAL -->
+<div id="adminModal">
+  <div class="admin-panel">
+    <div class="admin-hdr">
+      <h2>🛠 KarmaHQ Admin</h2>
+      <div class="admin-hdr-btns">
+        <button class="admin-save-btn" onclick="saveAllChanges()">💾 Save</button>
+        <button class="admin-close-btn" onclick="closeAdmin()">✕</button>
+      </div>
+    </div>
+    <div class="admin-tabs">
+      <button class="admin-tab active" onclick="switchTab('general')">General</button>
+      <button class="admin-tab" onclick="switchTab('hero')">Hero</button>
+      <button class="admin-tab" onclick="switchTab('features')">Features</button>
+      <button class="admin-tab" onclick="switchTab('steps')">How It Works</button>
+      <button class="admin-tab" onclick="switchTab('testi')">Testimonials</button>
+      <button class="admin-tab" onclick="switchTab('pricing')">Pricing</button>
+      <button class="admin-tab" onclick="switchTab('contact')">Contact</button>
+      <button class="admin-tab" onclick="switchTab('footer')">Footer</button>
+    </div>
+    <div class="admin-body">
+
+      <!-- GENERAL -->
+      <div class="admin-section active" id="tab-general">
+        <div class="admin-badge">Site Settings</div>
+        <div class="admin-group"><label class="admin-label">Site Name</label><input class="admin-input" id="cfg-siteName" placeholder="KarmaHQ"/></div>
+        <div class="admin-group"><label class="admin-label">Tagline (meta)</label><input class="admin-input" id="cfg-tagline" placeholder="Make Your Brand Rank On AI Search Engines"/></div>
+        <div class="admin-group"><label class="admin-label">Logo URL</label><input class="admin-input" id="cfg-logoUrl" placeholder="https://..."/><img id="prev-logo" class="admin-img-preview" src="" alt="" style="display:none;"/></div>
+        <div class="admin-group"><label class="admin-label">Primary Color (orange)</label><div style="display:flex;gap:10px;align-items:center;"><input type="color" id="cfg-primaryColor" value="#ff5d30" style="width:48px;height:40px;border:none;border-radius:8px;cursor:pointer;"/><input class="admin-input" id="cfg-primaryColorHex" value="#ff5d30" style="font-family:monospace;"/></div></div>
+        <div class="admin-group"><label class="admin-label">Nav Login Link</label><input class="admin-input" id="cfg-loginLink" placeholder="https://app.karmahq.com/login"/></div>
+        <div class="admin-group"><label class="admin-label">Nav CTA Text</label><input class="admin-input" id="cfg-navCta" placeholder="Get Started Free"/></div>
+        <div class="admin-group"><label class="admin-label">Nav CTA Link</label><input class="admin-input" id="cfg-navCtaLink" placeholder="#contact"/></div>
+      </div>
+
+      <!-- HERO -->
+      <div class="admin-section" id="tab-hero">
+        <div class="admin-badge">Hero Section</div>
+        <div class="admin-group"><label class="admin-label">Badge Text</label><input class="admin-input" id="cfg-heroBadge" placeholder="#1 AI Search Visibility Tool"/></div>
+        <div class="admin-group"><label class="admin-label">Headline Line 1</label><input class="admin-input" id="cfg-heroH1" placeholder="Make Your Brand"/></div>
+        <div class="admin-group"><label class="admin-label">Headline Line 2 (italic/orange)</label><input class="admin-input" id="cfg-heroH2" placeholder="Rank On AI"/></div>
+        <div class="admin-group"><label class="admin-label">Headline Line 3</label><input class="admin-input" id="cfg-heroH3" placeholder="Search Engines"/></div>
+        <div class="admin-group"><label class="admin-label">Subheading</label><textarea class="admin-textarea" id="cfg-heroSub"></textarea></div>
+        <div class="admin-row">
+          <div class="admin-group"><label class="admin-label">CTA 1 Text</label><input class="admin-input" id="cfg-heroCta1"/></div>
+          <div class="admin-group"><label class="admin-label">CTA 1 Link</label><input class="admin-input" id="cfg-heroCta1Link"/></div>
+        </div>
+        <div class="admin-row">
+          <div class="admin-group"><label class="admin-label">CTA 2 Text</label><input class="admin-input" id="cfg-heroCta2"/></div>
+          <div class="admin-group"><label class="admin-label">CTA 2 Link</label><input class="admin-input" id="cfg-heroCta2Link"/></div>
+        </div>
+        <div class="admin-group"><label class="admin-label">Social Proof Text</label><input class="admin-input" id="cfg-heroProof" placeholder="Trusted by 500+ brands worldwide"/></div>
+        <div class="admin-group"><label class="admin-label">Floating Card Title</label><input class="admin-input" id="cfg-heroCardTitle"/></div>
+        <div class="admin-group"><label class="admin-label">Floating Card Text</label><textarea class="admin-textarea" id="cfg-heroCardText" style="min-height:60px;"></textarea></div>
+      </div>
+
+      <!-- FEATURES -->
+      <div class="admin-section" id="tab-features">
+        <div class="admin-badge">Features Section</div>
+        <div class="admin-group"><label class="admin-label">Section Badge</label><input class="admin-input" id="cfg-featBadge"/></div>
+        <div class="admin-group"><label class="admin-label">Section Title</label><input class="admin-input" id="cfg-featTitle"/></div>
+        <div class="admin-group"><label class="admin-label">Section Subtitle</label><textarea class="admin-textarea" id="cfg-featSub" style="min-height:60px;"></textarea></div>
+        <div class="admin-hr"></div>
+        <div id="featCardsAdmin"></div>
+      </div>
+
+      <!-- HOW IT WORKS -->
+      <div class="admin-section" id="tab-steps">
+        <div class="admin-badge">How It Works</div>
+        <div class="admin-group"><label class="admin-label">Section Badge</label><input class="admin-input" id="cfg-stepsBadge"/></div>
+        <div class="admin-group"><label class="admin-label">Section Title</label><input class="admin-input" id="cfg-stepsTitle"/></div>
+        <div class="admin-group"><label class="admin-label">Subtitle</label><textarea class="admin-textarea" id="cfg-stepsSub" style="min-height:60px;"></textarea></div>
+        <div class="admin-hr"></div>
+        <div id="stepsAdmin"></div>
+      </div>
+
+      <!-- TESTIMONIALS -->
+      <div class="admin-section" id="tab-testi">
+        <div class="admin-badge">Testimonials</div>
+        <div class="admin-group"><label class="admin-label">Section Badge</label><input class="admin-input" id="cfg-testiBadge"/></div>
+        <div class="admin-group"><label class="admin-label">Section Title</label><input class="admin-input" id="cfg-testiTitle"/></div>
+        <div class="admin-group"><label class="admin-label">Section Subtitle</label><input class="admin-input" id="cfg-testiSub"/></div>
+        <div class="admin-hr"></div>
+        <div id="testiAdmin"></div>
+      </div>
+
+      <!-- PRICING -->
+      <div class="admin-section" id="tab-pricing">
+        <div class="admin-badge">Pricing</div>
+        <div class="admin-group"><label class="admin-label">Section Badge</label><input class="admin-input" id="cfg-priceBadge"/></div>
+        <div class="admin-group"><label class="admin-label">Section Title</label><input class="admin-input" id="cfg-priceTitle"/></div>
+        <div class="admin-group"><label class="admin-label">Section Subtitle</label><textarea class="admin-textarea" id="cfg-priceSub" style="min-height:60px;"></textarea></div>
+        <div class="admin-group"><label class="admin-label">CTA Box Title</label><input class="admin-input" id="cfg-priceCtaTitle"/></div>
+        <div class="admin-group"><label class="admin-label">CTA Box Text</label><textarea class="admin-textarea" id="cfg-priceCtaText" style="min-height:60px;"></textarea></div>
+        <div class="admin-group"><label class="admin-label">CTA Button Text</label><input class="admin-input" id="cfg-priceCtaBtn"/></div>
+        <div class="admin-group"><label class="admin-label">CTA Button Link</label><input class="admin-input" id="cfg-priceCtaBtnLink"/></div>
+        <div class="admin-hr"></div>
+        <div id="plansAdmin"></div>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="admin-section" id="tab-contact">
+        <div class="admin-badge">Contact Section</div>
+        <div class="admin-group"><label class="admin-label">Section Badge</label><input class="admin-input" id="cfg-contBadge"/></div>
+        <div class="admin-group"><label class="admin-label">Section Title</label><input class="admin-input" id="cfg-contTitle"/></div>
+        <div class="admin-group"><label class="admin-label">Subtitle</label><textarea class="admin-textarea" id="cfg-contSub" style="min-height:60px;"></textarea></div>
+        <div class="admin-group"><label class="admin-label">Email</label><input class="admin-input" id="cfg-email" type="email"/></div>
+        <div class="admin-group"><label class="admin-label">Phone</label><input class="admin-input" id="cfg-phone"/></div>
+        <div class="admin-group"><label class="admin-label">Address</label><input class="admin-input" id="cfg-address"/></div>
+        <div class="admin-group"><label class="admin-label">Form Button Text</label><input class="admin-input" id="cfg-formBtn"/></div>
+        <div class="admin-group"><label class="admin-label">Success Message</label><textarea class="admin-textarea" id="cfg-formSuccess" style="min-height:60px;"></textarea></div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="admin-section" id="tab-footer">
+        <div class="admin-badge">Footer</div>
+        <div class="admin-group"><label class="admin-label">Footer Description</label><textarea class="admin-textarea" id="cfg-footerDesc"></textarea></div>
+        <div class="admin-group"><label class="admin-label">Copyright Text</label><input class="admin-input" id="cfg-copyright"/></div>
+        <div class="admin-row">
+          <div class="admin-group"><label class="admin-label">Twitter URL</label><input class="admin-input" id="cfg-twitter"/></div>
+          <div class="admin-group"><label class="admin-label">LinkedIn URL</label><input class="admin-input" id="cfg-linkedin"/></div>
+        </div>
+        <div class="admin-row">
+          <div class="admin-group"><label class="admin-label">Instagram URL</label><input class="admin-input" id="cfg-instagram"/></div>
+          <div class="admin-group"><label class="admin-label">Facebook URL</label><input class="admin-input" id="cfg-facebook"/></div>
+        </div>
+        <div class="admin-group"><label class="admin-label">CTA Banner Title</label><input class="admin-input" id="cfg-ctaTitle"/></div>
+        <div class="admin-group"><label class="admin-label">CTA Banner Text</label><textarea class="admin-textarea" id="cfg-ctaText" style="min-height:60px;"></textarea></div>
+        <div class="admin-group"><label class="admin-label">CTA Button Text</label><input class="admin-input" id="cfg-ctaBtn"/></div>
+        <div class="admin-group"><label class="admin-label">CTA Button Link</label><input class="admin-input" id="cfg-ctaBtnLink"/></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ -->
+<!--              WEBSITE HTML             -->
+<!-- ══════════════════════════════════════ -->
+
+<!-- NAVBAR -->
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo" id="navLogo">
+      <div class="logo-k">K</div>
+      Karma<span class="logo-hq">HQ</span>
+    </a>
+    <div class="nav-links">
+      <a href="#about" onclick="scrollTo('about')">About</a>
+      <a href="#how-it-works" onclick="scrollTo('how-it-works')">How It Works</a>
+      <a href="#pricing" onclick="scrollTo('pricing')">Pricing</a>
+      <a href="#contact" onclick="scrollTo('contact')">Contact</a>
+    </div>
+    <div class="nav-cta-group">
+      <a href="#" id="navLoginLink"><button class="btn-login" id="navLoginText">Login</button></a>
+      <a href="#contact" id="navCtaLink"><button class="btn-primary" id="navCtaText">Get Started Free</button></a>
+    </div>
+    <button class="mob-toggle" onclick="toggleMob()" aria-label="Menu">☰</button>
+  </div>
+  <div class="mob-menu" id="mobMenu">
+    <a href="#about" onclick="closeMob()">About</a>
+    <a href="#how-it-works" onclick="closeMob()">How It Works</a>
+    <a href="#pricing" onclick="closeMob()">Pricing</a>
+    <a href="#contact" onclick="closeMob()">Contact</a>
+    <div class="mob-menu-btns">
+      <a href="#contact" onclick="closeMob()"><button class="btn-primary" style="width:100%;" id="mobCtaBtn">Get Started Free</button></a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg-dots"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-badge" id="heroBadge">#1 AI Search Visibility Tool</div>
+    <h1 id="heroH1">Make Your Brand<br/><em id="heroH2">Rank On AI</em><br/><span id="heroH3">Search Engines</span></h1>
+    <p class="hero-sub" id="heroSub">Let Karma HQ handle Reddit &amp; Quora Marketing for AI visibility. Turn conversations into customers and get found on AI search results.</p>
+    <div class="hero-btns">
+      <a href="#contact" id="heroCta1Link"><button class="btn-primary" style="padding:13px 28px;font-size:15px;" id="heroCta1">Schedule a Demo ▶</button></a>
+      <a href="#contact" id="heroCta2Link"><button class="btn-outline" style="padding:13px 28px;font-size:15px;" id="heroCta2">Request a Consultation →</button></a>
+    </div>
+    <div class="hero-social-proof">
+      <div class="hero-avatars">
+        <span>A</span><span>M</span><span>J</span><span>S</span>
+      </div>
+      <span id="heroProof">Trusted by 500+ brands worldwide</span>
+    </div>
+  </div>
+  <div class="hero-card" id="heroCard">
+    <div class="hero-card-inner">
+      <h4 id="heroCardTitle">🚀 AI Search Visibility</h4>
+      <p id="heroCardText">Your brand is now being cited by ChatGPT, Gemini &amp; Perplexity in relevant searches.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOGOS STRIP -->
+<div class="logos-section">
+  <div class="logos-wrap">
+    <div class="logos-track">
+      <div class="logo-item"><span>Reddit</span></div>
+      <div class="logo-item"><span>Quora</span></div>
+      <div class="logo-item"><span>ChatGPT</span></div>
+      <div class="logo-item"><span>Gemini</span></div>
+      <div class="logo-item"><span>Perplexity</span></div>
+      <div class="logo-item"><span>Claude</span></div>
+      <div class="logo-item"><span>LinkedIn</span></div>
+      <div class="logo-item"><span>Google</span></div>
+      <div class="logo-item"><span>Reddit</span></div>
+      <div class="logo-item"><span>Quora</span></div>
+      <div class="logo-item"><span>ChatGPT</span></div>
+      <div class="logo-item"><span>Gemini</span></div>
+      <div class="logo-item"><span>Perplexity</span></div>
+      <div class="logo-item"><span>Claude</span></div>
+      <div class="logo-item"><span>LinkedIn</span></div>
+      <div class="logo-item"><span>Google</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES / ABOUT -->
+<section class="section features-bg" id="about">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <div class="sec-badge mx-auto" id="featBadge">Why KarmaHQ</div>
+      <h2 class="sec-title" id="featTitle">The Only Platform Built for AI Search Visibility</h2>
+      <p class="sec-sub mx-auto" id="featSub">Track rankings, monitor cited conversations and place your brand where AI engines look first.</p>
+    </div>
+    <div class="features-grid" id="featuresGrid"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section stats-bg">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item"><div class="stat-num">4<span>+</span></div><div class="stat-label">Years Experience</div></div>
+      <div class="stat-item"><div class="stat-num">500<span>+</span></div><div class="stat-label">Campaigns Executed</div></div>
+      <div class="stat-item"><div class="stat-num">10K<span>+</span></div><div class="stat-label">Mentions Deployed</div></div>
+      <div class="stat-item"><div class="stat-num">50<span>+</span></div><div class="stat-label">Brands Served</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section hiw-bg" id="how-it-works">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <div class="sec-badge mx-auto" id="stepsBadge">How It Works</div>
+      <h2 class="sec-title" id="stepsTitle">How We Help Brands Boost Their AI Presence</h2>
+      <p class="sec-sub mx-auto" id="stepsSub">Karma HQ is greatly focused on improving your overall brand visibility through authentic presence on AI-preferred community forums.</p>
+    </div>
+    <div class="steps-grid" id="stepsGrid"></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi-bg" id="testimonials">
+  <div class="container text-center" style="max-width:700px;margin-left:auto;margin-right:auto;padding:0 24px 48px;">
+    <div class="sec-badge mx-auto" id="testiBadge">Testimonials</div>
+    <h2 class="sec-title" id="testiTitle">Our Clients Speak of Our Reputation</h2>
+    <p class="sec-sub mx-auto" id="testiSub">Don't just go with what we are claiming; check what our clients say!</p>
+  </div>
+  <div class="marquee-wrap"><div class="marquee-row" id="trow1"></div></div>
+  <div class="marquee-wrap" style="margin-top:0;"><div class="marquee-row rev" id="trow2"></div></div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing-bg" id="pricing">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <div class="sec-badge mx-auto" id="priceBadge">Pricing</div>
+      <h2 class="sec-title" id="priceTitle">Karma HQ Service Packages</h2>
+      <p class="sec-sub mx-auto" id="priceSub">Choose the plan that matches your brand mentions and AI visibility needs.</p>
+    </div>
+    <div class="pricing-grid" id="pricingGrid"></div>
+    <div class="pricing-cta-box">
+      <h3 id="priceCtaTitle">We Also Provide Custom Marketing Packages!</h3>
+      <p id="priceCtaText">To get started, simply share your website or brand details, and we will analyze your growth opportunities.</p>
+      <a href="#contact" id="priceCtaBtnLink"><button class="btn-primary" id="priceCtaBtn">Contact Us for More Details →</button></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-bg" id="ctaBanner">
+  <h2 id="ctaTitle">Steal the AI Spotlight With Karma HQ!</h2>
+  <p id="ctaText">Achieve better rankings and improve AI-generated recommendations for your brand with Karma HQ's strategic campaigns.</p>
+  <a href="#contact" id="ctaBtnLink"><button class="btn-primary" style="padding:14px 32px;font-size:15px;" id="ctaBtn">Get Started Now →</button></a>
+</div>
+
+<!-- CONTACT -->
+<section class="section contact-bg" id="contact">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <div class="sec-badge mx-auto" id="contBadge">Get Started</div>
+      <h2 class="sec-title" id="contTitle">Analyze Your Brand's Reddit &amp; Quora Opportunity</h2>
+      <p class="sec-sub mx-auto" id="contSub">Share your website or brand details and we will analyze your growth opportunities on Reddit and Quora.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Contact Information</h3>
+        <div class="contact-row"><div class="contact-icon">📧</div><div class="contact-info-text"><small>Email us at</small><p id="contEmail">hello@karmahq.com</p></div></div>
+        <div class="contact-row"><div class="contact-icon">📞</div><div class="contact-info-text"><small>Call us at</small><p id="contPhone">+1 (555) 000-0000</p></div></div>
+        <div class="contact-row"><div class="contact-icon">📍</div><div class="contact-info-text"><small>Find us at</small><p id="contAddress">San Francisco, CA</p></div></div>
+        <div style="margin-top:28px;background:#1b181c;border-radius:20px;padding:24px;color:#fff;">
+          <div style="font-size:22px;margin-bottom:10px;">💬</div>
+          <h4 style="font-size:16px;font-weight:700;margin-bottom:6px;">Prefer to chat?</h4>
+          <p style="font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;">Use the chat widget in the bottom right corner. Our team typically replies under 3 hours.</p>
+        </div>
+      </div>
+      <div class="contact-form-box" id="contactFormBox">
+        <form id="contactForm" onsubmit="handleForm(event)">
+          <div class="form-row">
+            <div><label class="form-label">Full Name *</label><input class="form-ctrl" id="fname" placeholder="Your name" required/></div>
+            <div><label class="form-label">Email *</label><input class="form-ctrl" type="email" id="femail" placeholder="you@company.com" required/></div>
+          </div>
+          <div class="form-row">
+            <div><label class="form-label">Website URL</label><input class="form-ctrl" id="fweb" placeholder="https://yoursite.com"/></div>
+            <div><label class="form-label">Phone (optional)</label><input class="form-ctrl" id="fphone2" placeholder="+1 (555) 000-0000"/></div>
+          </div>
+          <div class="form-field"><label class="form-label">Brand Details *</label><textarea class="form-ctrl form-textarea" id="fbrand" placeholder="Tell us about your brand..." required></textarea></div>
+          <label class="form-label">Interested Plan</label>
+          <div class="plan-opts">
+            <button type="button" class="plan-opt active" id="optFree" onclick="selPlan('free')"><div class="plan-opt-name">Free Plan</div><div class="plan-opt-sub">Basic Reddit &amp; Quora Audit</div></button>
+            <button type="button" class="plan-opt" id="optPro" onclick="selPlan('pro')"><div class="plan-opt-name">Pro Plan</div><div class="plan-opt-sub">Detailed Audit + Strategy</div></button>
+          </div>
+          <button type="submit" class="btn-submit" id="formSubmitBtn">Analyze My Opportunity →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo" style="margin-bottom:0;">
+        <div class="logo-k">K</div>Karma<span class="logo-hq">HQ</span>
+      </div>
+      <p id="footerDesc">Karma HQ is a leading online forum marketing agency focusing on Reddit and Quora marketing services to help brands gain better AI search visibility and conversions.</p>
+      <a href="#" id="footerEmail">📧 hello@karmahq.com</a>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#how-it-works">Reddit Marketing</a></li>
+        <li><a href="#how-it-works">Quora Marketing</a></li>
+        <li><a href="#how-it-works">AI Visibility</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" onclick="alert('Terms of Service\nPlease contact hello@karmahq.com for full terms.')">Terms</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="#" id="footerTwitter" target="_blank">Twitter / X</a></li>
+        <li><a href="#" id="footerLinkedin" target="_blank">LinkedIn</a></li>
+        <li><a href="#" id="footerInstagram" target="_blank">Instagram</a></li>
+        <li><a href="#" id="footerFacebook" target="_blank">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <p id="footerCopyright">© 2026 Karma HQ. All rights reserved.</p>
+    <div class="footer-bot-links">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Security</a>
+    </div>
+  </div>
+</footer>
+
+<!-- CHAT WIDGET -->
+<button class="chat-btn" onclick="toggleChat()" id="chatBtn">💬</button>
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-hdr">
+    <div class="chat-av">K</div>
+    <div class="chat-hdr-info">
+      <div class="chat-name">KarmaHQ</div>
+      <div class="chat-status"><div class="chat-dot"></div> Typically replies under 3 hours</div>
+    </div>
+    <button class="chat-cls" onclick="toggleChat()">✕</button>
+  </div>
+  <div class="chat-msgs" id="chatMsgs">
+    <div class="chat-msg bot">Hello! How can I help you? 😊</div>
+    <div class="chat-msg bot">Share your website or brand details and we'll analyze your Reddit growth opportunities.</div>
+  </div>
+  <div class="chat-input-area">
+    <div class="chat-row">
+      <input class="chat-inp" id="chatInp" placeholder="Compose your message..." onkeydown="if(event.key==='Enter')sendChat()"/>
+      <button class="chat-send" onclick="sendChat()">➤</button>
+    </div>
+    <div style="text-align:center;font-size:11px;color:rgba(70,72,77,.4);margin-top:8px;">Powered by KarmaHQ</div>
+  </div>
+</div>
+
+<script>
+// ── DATA STORE ────────────────────────────────────────────────────────────────
+var D = {
+  siteName:"KarmaHQ",tagline:"Make Your Brand Rank On AI Search Engines",logoUrl:"",primaryColor:"#ff5d30",
+  loginLink:"#",navCta:"Get Started Free",navCtaLink:"#contact",
+  heroBadge:"#1 AI Search Visibility Tool",heroH1:"Make Your Brand",heroH2:"Rank On AI",heroH3:"Search Engines",
+  heroSub:"Let Karma HQ handle Reddit & Quora Marketing for AI visibility. Turn conversations into customers and get found on AI search results.",
+  heroCta1:"Schedule a Demo ▶",heroCta1Link:"#contact",heroCta2:"Request a Consultation →",heroCta2Link:"#contact",
+  heroProof:"Trusted by 500+ brands worldwide",heroCardTitle:"🚀 AI Search Visibility",
+  heroCardText:"Your brand is now being cited by ChatGPT, Gemini & Perplexity in relevant searches.",
+  featBadge:"Why KarmaHQ",featTitle:"The Only Platform Built for AI Search Visibility",
+  featSub:"Track rankings, monitor cited conversations and place your brand where AI engines look first.",
+  features:[
+    {icon:"🎯",title:"AI Rank Tracking",desc:"Monitor exactly where your brand appears in ChatGPT, Gemini, Perplexity, and Claude responses."},
+    {icon:"💬",title:"Engagement Engine",desc:"Deploy authentic replies in Reddit and Quora threads where your potential customers are active."},
+    {icon:"📊",title:"Conversation Intelligence",desc:"Find and monitor high-intent conversations your potential customers are participating in right now."},
+    {icon:"🔗",title:"Citation Monitoring",desc:"Track every time your brand URLs and content are cited by AI search engines automatically."},
+    {icon:"⚡",title:"Automated Outreach",desc:"Scale your forum presence with AI-powered responses that feel genuinely human and contextual."},
+    {icon:"📈",title:"Growth Analytics",desc:"Comprehensive dashboards showing your AI visibility score, citation trends, and brand mentions."}
+  ],
+  stepsBadge:"How It Works",stepsTitle:"How We Help Brands Boost Their AI Presence",
+  stepsSub:"Karma HQ is greatly focused on improving your overall brand visibility through authentic presence on AI-preferred community forums.",
+  steps:[
+    {num:"01",title:"Research & Map Your Audience",desc:"We perform a detailed analysis of your target market and monitor high-intent conversations your potential customers are participating in."},
+    {num:"02",title:"Create a Conversation Strategy",desc:"We create a strategy focused on having open discussions where we naturally introduce your brand as the perfect choice."},
+    {num:"03",title:"Participate in Forum Threads",desc:"To create a natural flow of conversation, we participate in discussions to boost real customer engagement and build credibility."},
+    {num:"04",title:"Increase Brand Visibility",desc:"We focus on ongoing engagement, maintaining the success of your campaign over time, and continually increasing your brand visibility."}
+  ],
+  testiBadge:"Testimonials",testiTitle:"Our Clients Speak of Our Reputation",
+  testiSub:"Don't just go with what we are claiming; check what our clients say!",
+  testimonials:[
+    {name:"Marcus A",role:"eCom",text:""I've never seen such huge ROAS anywhere else. I was able to take my e-com stores to rank in almost all of our core topics in our niche, which has led to over $1M extra revenue since January.""},
+    {name:"Michal H",role:"Red-engage",text:""The tool really made our work so much easier, we're able to give our clients not only good results, but with less effort from our side. We've been with them since they started.""},
+    {name:"Adrina W",role:"App",text:""Our app launched 4 months ago and ranking on LLM's have driven more traffic than paid ads for us. We've tried to get our brand into all the relevant Reddit citations that we see LLM's citing from.""},
+    {name:"James K",role:"SaaS Founder",text:""Within 3 weeks of using KarmaHQ, our brand started appearing in AI search results. The ROI has been incredible — we didn't touch paid ads at all this quarter.""},
+    {name:"Sarah L",role:"Marketing Director",text:""KarmaHQ transformed how we approach Reddit marketing. The AI-generated replies feel so natural, and the karma growth has been remarkable.""},
+    {name:"David R",role:"Growth Lead",text:""This tool is the missing piece for any company serious about Reddit growth. It's not just automation — it's smart, contextual engagement.""}
+  ],
+  priceBadge:"Pricing",priceTitle:"Karma HQ Service Packages – Customizable & Transparent",
+  priceSub:"Choose the plan that matches your brand mentions and AI visibility needs, from the free basic plan to the pro plan focused on your brand growth.",
+  plans:[
+    {name:"Free Plan",desc:"Best for: Individuals / Small Businesses",featured:false,features:["Basic Reddit Audit Report","Basic Quora Audit Report","Brand Overview + Opportunities","20 AI search prompts","20 social listening keywords"],pricing:["$10 per Comment","$25 per Post","$0.3 per Upvote","$0.3 per Downvote"]},
+    {name:"Pro Plan",desc:"Best for: Established Brands / Businesses",featured:true,features:["Detailed Reddit Audit Report","Detailed Quora Audit Report","In-depth Analysis + Strategy","75 AI search prompts","75 social listening keywords"],pricing:["$8 per Comment","$20 per Post","$0.1 per Upvote","$0.1 per Downvote"]}
+  ],
+  priceCtaTitle:"We Also Provide Custom Marketing Packages!",
+  priceCtaText:"To get started, simply share your website or brand details, and we will analyze your growth opportunities on Reddit and Quora.",
+  priceCtaBtn:"Contact Us for More Details →",priceCtaBtnLink:"#contact",
+  ctaTitle:"Steal the AI Spotlight With Karma HQ!",
+  ctaText:"Achieve better rankings in search results and improve AI-generated recommendations for your brand with Karma HQ's strategic Reddit and Quora marketing campaigns.",
+  ctaBtn:"Get Started Now →",ctaBtnLink:"#contact",
+  contBadge:"Get Started",contTitle:"Analyze Your Brand's Reddit & Quora Opportunity",
+  contSub:"Share your website or brand details and we will analyze your growth opportunities on Reddit and Quora.",
+  email:"hello@karmahq.com",phone:"+1 (555) 000-0000",address:"San Francisco, CA",
+  formBtn:"Analyze My Opportunity →",formSuccess:"We're on it! Our team will analyze your opportunities and get back to you within 24 hours.",
+  footerDesc:"Karma HQ is a leading online forum marketing agency focusing on Reddit and Quora marketing services to help brands gain better AI search visibility and conversions.",
+  copyright:"© 2026 Karma HQ. All rights reserved.",
+  twitter:"#",linkedin:"#",instagram:"#",facebook:"#"
+};
+
+// Load from localStorage
+try{var saved=localStorage.getItem('karmahq_data');if(saved){D=Object.assign({},D,JSON.parse(saved));}}catch(e){}
+
+// ── RENDER ────────────────────────────────────────────────────────────────────
+function render(){
+  // General
+  document.title=D.siteName+' – '+D.tagline;
+  var desc=document.getElementById('siteDesc');if(desc)desc.content=D.tagline;
+  if(D.logoUrl){var lk=document.getElementById('navLogo');if(lk){lk.innerHTML='<img src="'+D.logoUrl+'" style="height:32px;border-radius:8px;" alt="logo"/> '+D.siteName;}}
+  else{var lk=document.getElementById('navLogo');if(lk){lk.innerHTML='<div class="logo-k">'+D.siteName[0]+'</div>'+D.siteName.replace('HQ','')+'<span class="logo-hq">HQ</span>';}}
+  setPrimaryColor(D.primaryColor);
+  var nl=document.getElementById('navLoginLink');if(nl)nl.href=D.loginLink;
+  var nc=document.getElementById('navCtaLink');if(nc)nc.href=D.navCtaLink;
+  var nct=document.getElementById('navCtaText');if(nct)nct.textContent=D.navCta;
+  var mCta=document.getElementById('mobCtaBtn');if(mCta)mCta.textContent=D.navCta;
+  // Hero
+  setText('heroBadge',D.heroBadge);setText('heroH1',D.heroH1);
+  var h2=document.getElementById('heroH2');if(h2)h2.textContent=D.heroH2;
+  setText('heroH3',D.heroH3);setText('heroSub',D.heroSub);
+  setText('heroCta1',D.heroCta1);setText('heroCta2',D.heroCta2);
+  var c1=document.getElementById('heroCta1Link');if(c1)c1.href=D.heroCta1Link;
+  var c2=document.getElementById('heroCta2Link');if(c2)c2.href=D.heroCta2Link;
+  setText('heroProof',D.heroProof);setText('heroCardTitle',D.heroCardTitle);setText('heroCardText',D.heroCardText);
+  // Features
+  setText('featBadge',D.featBadge);setText('featTitle',D.featTitle);setText('featSub',D.featSub);
+  var fg=document.getElementById('featuresGrid');
+  if(fg){fg.innerHTML=D.features.map(function(f){return '<div class="feature-card"><div class="feature-icon">'+f.icon+'</div><h3>'+f.title+'</h3><p>'+f.desc+'</p></div>';}).join('');}
+  // Steps
+  setText('stepsBadge',D.stepsBadge);setText('stepsTitle',D.stepsTitle);setText('stepsSub',D.stepsSub);
+  var sg=document.getElementById('stepsGrid');
+  if(sg){sg.innerHTML=D.steps.map(function(s){return '<div class="step-card"><div class="step-num">'+s.num+'</div><h3>'+s.title+'</h3><p>'+s.desc+'</p></div>';}).join('');}
+  // Testimonials
+  setText('testiBadge',D.testiBadge);setText('testiTitle',D.testiTitle);setText('testiSub',D.testiSub);
+  var half=Math.ceil(D.testimonials.length/2);
+  var r1=D.testimonials.slice(0,half),r2=D.testimonials.slice(half);
+  function tCard(t){return '<div class="testi-card"><div class="stars">★★★★★</div><p>'+t.text+'</p><div class="testi-author"><div class="testi-av">'+t.name[0]+'</div><div><div class="testi-name">'+t.name+'</div><div class="testi-role">'+t.role+'</div></div></div></div>';}
+  var tr1=document.getElementById('trow1');if(tr1)tr1.innerHTML=[...r1,...r1].map(tCard).join('');
+  var tr2=document.getElementById('trow2');if(tr2)tr2.innerHTML=[...r2,...r2].map(tCard).join('');
+  // Pricing
+  setText('priceBadge',D.priceBadge);setText('priceTitle',D.priceTitle);setText('priceSub',D.priceSub);
+  setText('priceCtaTitle',D.priceCtaTitle);setText('priceCtaText',D.priceCtaText);setText('priceCtaBtn',D.priceCtaBtn);
+  var pb=document.getElementById('priceCtaBtnLink');if(pb)pb.href=D.priceCtaBtnLink;
+  var pg=document.getElementById('pricingGrid');
+  if(pg){pg.innerHTML=D.plans.map(function(p){return '<div class="plan-card'+(p.featured?' featured':'')+'">'+
+    (p.featured?'<div class="plan-pop">Most Popular</div>':'')+
+    '<div class="plan-name">'+p.name+'</div><div class="plan-desc">'+p.desc+'</div>'+
+    '<ul class="plan-features">'+p.features.map(function(f){return '<li>'+f+'</li>';}).join('')+'</ul>'+
+    '<div class="plan-pricing">'+p.pricing.map(function(pr){return '<div class="price-pill">'+pr+'</div>';}).join('')+'</div></div>';}).join('');}
+  // CTA
+  setText('ctaTitle',D.ctaTitle);setText('ctaText',D.ctaText);setText('ctaBtn',D.ctaBtn);
+  var cb=document.getElementById('ctaBtnLink');if(cb)cb.href=D.ctaBtnLink;
+  // Contact
+  setText('contBadge',D.contBadge);setText('contTitle',D.contTitle);setText('contSub',D.contSub);
+  setText('contEmail',D.email);setText('contPhone',D.phone);setText('contAddress',D.address);
+  var fb=document.getElementById('formSubmitBtn');if(fb)fb.textContent=D.formBtn;
+  // Footer
+  setText('footerDesc',D.footerDesc);setText('footerCopyright',D.copyright);
+  var fe=document.getElementById('footerEmail');if(fe){fe.textContent='📧 '+D.email;fe.href='mailto:'+D.email;}
+  var ft=document.getElementById('footerTwitter');if(ft)ft.href=D.twitter||'#';
+  var fli=document.getElementById('footerLinkedin');if(fli)fli.href=D.linkedin||'#';
+  var fi=document.getElementById('footerInstagram');if(fi)fi.href=D.instagram||'#';
+  var ff=document.getElementById('footerFacebook');if(ff)ff.href=D.facebook||'#';
+}
+
+function setText(id,val){var el=document.getElementById(id);if(el)el.textContent=val;}
+function setVal(id,val){var el=document.getElementById(id);if(el)el.value=val||'';}
+function getVal(id){var el=document.getElementById(id);return el?el.value:'';}
+
+function setPrimaryColor(c){
+  document.documentElement.style.setProperty('--orange',c);
+  document.documentElement.style.setProperty('--orange-dark',shadeColor(c,-15));
+}
+function shadeColor(color,percent){
+  var num=parseInt(color.replace('#',''),16),amt=Math.round(2.55*percent),
+    r=(num>>16)+amt,g=(num>>8&0x00FF)+amt,b=(num&0x0000FF)+amt;
+  return '#'+(0x1000000+(r<255?r<1?0:r:255)*0x10000+(g<255?g<1?0:g:255)*0x100+(b<255?b<1?0:b:255)).toString(16).slice(1);
+}
+
+// ── ADMIN FIELDS POPULATE ─────────────────────────────────────────────────────
+function populateAdmin(){
+  setVal('cfg-siteName',D.siteName);setVal('cfg-tagline',D.tagline);setVal('cfg-logoUrl',D.logoUrl);
+  setVal('cfg-primaryColor',D.primaryColor);setVal('cfg-primaryColorHex',D.primaryColor);
+  setVal('cfg-loginLink',D.loginLink);setVal('cfg-navCta',D.navCta);setVal('cfg-navCtaLink',D.navCtaLink);
+  setVal('cfg-heroBadge',D.heroBadge);setVal('cfg-heroH1',D.heroH1);setVal('cfg-heroH2',D.heroH2);
+  setVal('cfg-heroH3',D.heroH3);setVal('cfg-heroSub',D.heroSub);
+  setVal('cfg-heroCta1',D.heroCta1);setVal('cfg-heroCta1Link',D.heroCta1Link);
+  setVal('cfg-heroCta2',D.heroCta2);setVal('cfg-heroCta2Link',D.heroCta2Link);
+  setVal('cfg-heroProof',D.heroProof);setVal('cfg-heroCardTitle',D.heroCardTitle);setVal('cfg-heroCardText',D.heroCardText);
+  setVal('cfg-featBadge',D.featBadge);setVal('cfg-featTitle',D.featTitle);setVal('cfg-featSub',D.featSub);
+  setVal('cfg-stepsBadge',D.stepsBadge);setVal('cfg-stepsTitle',D.stepsTitle);setVal('cfg-stepsSub',D.stepsSub);
+  setVal('cfg-testiBadge',D.testiBadge);setVal('cfg-testiTitle',D.testiTitle);setVal('cfg-testiSub',D.testiSub);
+  setVal('cfg-priceBadge',D.priceBadge);setVal('cfg-priceTitle',D.priceTitle);setVal('cfg-priceSub',D.priceSub);
+  setVal('cfg-priceCtaTitle',D.priceCtaTitle);setVal('cfg-priceCtaText',D.priceCtaText);
+  setVal('cfg-priceCtaBtn',D.priceCtaBtn);setVal('cfg-priceCtaBtnLink',D.priceCtaBtnLink);
+  setVal('cfg-contBadge',D.contBadge);setVal('cfg-contTitle',D.contTitle);setVal('cfg-contSub',D.contSub);
+  setVal('cfg-email',D.email);setVal('cfg-phone',D.phone);setVal('cfg-address',D.address);
+  setVal('cfg-formBtn',D.formBtn);setVal('cfg-formSuccess',D.formSuccess);
+  setVal('cfg-footerDesc',D.footerDesc);setVal('cfg-copyright',D.copyright);
+  setVal('cfg-twitter',D.twitter);setVal('cfg-linkedin',D.linkedin);
+  setVal('cfg-instagram',D.instagram);setVal('cfg-facebook',D.facebook);
+  setVal('cfg-ctaTitle',D.ctaTitle);setVal('cfg-ctaText',D.ctaText);
+  setVal('cfg-ctaBtn',D.ctaBtn);setVal('cfg-ctaBtnLink',D.ctaBtnLink);
+  // Dynamic feature cards
+  buildFeatAdmin();buildStepsAdmin();buildTestiAdmin();buildPlansAdmin();
+  // Logo preview
+  var pc=document.getElementById('cfg-primaryColor');
+  if(pc)pc.addEventListener('input',function(){setVal('cfg-primaryColorHex',this.value);setPrimaryColor(this.value);});
+  var pch=document.getElementById('cfg-primaryColorHex');
+  if(pch)pch.addEventListener('input',function(){if(this.value.length===7){setVal('cfg-primaryColor',this.value);setPrimaryColor(this.value);}});
+  var lu=document.getElementById('cfg-logoUrl');
+  if(lu)lu.addEventListener('input',function(){var p=document.getElementById('prev-logo');if(this.value){p.src=this.value;p.style.display='block';}else{p.style.display='none';}});
+  if(D.logoUrl){var p=document.getElementById('prev-logo');if(p){p.src=D.logoUrl;p.style.display='block';}}
+}
+
+function buildFeatAdmin(){
+  var el=document.getElementById('featCardsAdmin');if(!el)return;
+  el.innerHTML=D.features.map(function(f,i){return '<div style="background:#fbfaf9;border-radius:12px;padding:16px;margin-bottom:12px;border:1px solid rgba(70,72,77,.1);">'+
+    '<div style="font-size:12px;font-weight:700;color:var(--orange);margin-bottom:10px;">Feature '+(i+1)+'</div>'+
+    '<div class="admin-row">'+
+    '<div class="admin-group"><label class="admin-label">Icon (emoji)</label><input class="admin-input feat-icon" data-i="'+i+'" value="'+f.icon+'"/></div>'+
+    '<div class="admin-group"><label class="admin-label">Title</label><input class="admin-input feat-title" data-i="'+i+'" value="'+f.title+'"/></div>'+
+    '</div>'+
+    '<div class="admin-group"><label class="admin-label">Description</label><textarea class="admin-textarea feat-desc" data-i="'+i+'">'+f.desc+'</textarea></div></div>';}).join('');
+}
+function buildStepsAdmin(){
+  var el=document.getElementById('stepsAdmin');if(!el)return;
+  el.innerHTML=D.steps.map(function(s,i){return '<div style="background:#fbfaf9;border-radius:12px;padding:16px;margin-bottom:12px;border:1px solid rgba(70,72,77,.1);">'+
+    '<div style="font-size:12px;font-weight:700;color:var(--orange);margin-bottom:10px;">Step '+(i+1)+'</div>'+
+    '<div class="admin-group"><label class="admin-label">Title</label><input class="admin-input step-title" data-i="'+i+'" value="'+s.title+'"/></div>'+
+    '<div class="admin-group"><label class="admin-label">Description</label><textarea class="admin-textarea step-desc" data-i="'+i+'">'+s.desc+'</textarea></div></div>';}).join('');
+}
+function buildTestiAdmin(){
+  var el=document.getElementById('testiAdmin');if(!el)return;
+  el.innerHTML=D.testimonials.map(function(t,i){return '<div style="background:#fbfaf9;border-radius:12px;padding:16px;margin-bottom:12px;border:1px solid rgba(70,72,77,.1);">'+
+    '<div style="font-size:12px;font-weight:700;color:var(--orange);margin-bottom:10px;">Review '+(i+1)+'</div>'+
+    '<div class="admin-row">'+
+    '<div class="admin-group"><label class="admin-label">Name</label><input class="admin-input testi-name" data-i="'+i+'" value="'+t.name+'"/></div>'+
+    '<div class="admin-group"><label class="admin-label">Role</label><input class="admin-input testi-role" data-i="'+i+'" value="'+t.role+'"/></div>'+
+    '</div>'+
+    '<div class="admin-group"><label class="admin-label">Review Text</label><textarea class="admin-textarea testi-text" data-i="'+i+'">'+t.text+'</textarea></div></div>';}).join('');
+}
+function buildPlansAdmin(){
+  var el=document.getElementById('plansAdmin');if(!el)return;
+  el.innerHTML=D.plans.map(function(p,i){return '<div style="background:#fbfaf9;border-radius:12px;padding:16px;margin-bottom:12px;border:1px solid rgba(70,72,77,.1);">'+
+    '<div style="font-size:12px;font-weight:700;color:var(--orange);margin-bottom:10px;">Plan '+(i+1)+(p.featured?' ⭐':'')+'</div>'+
+    '<div class="admin-row">'+
+    '<div class="admin-group"><label class="admin-label">Plan Name</label><input class="admin-input plan-name-inp" data-i="'+i+'" value="'+p.name+'"/></div>'+
+    '<div class="admin-group"><label class="admin-label">Description</label><input class="admin-input plan-desc-inp" data-i="'+i+'" value="'+p.desc+'"/></div>'+
+    '</div>'+
+    '<div class="admin-group"><label class="admin-label">Features (one per line)</label><textarea class="admin-textarea plan-feat-inp" data-i="'+i+'">'+p.features.join('\n')+'</textarea></div>'+
+    '<div class="admin-group"><label class="admin-label">Pricing Pills (one per line)</label><textarea class="admin-textarea plan-price-inp" data-i="'+i+'">'+p.pricing.join('\n')+'</textarea></div></div>';}).join('');
+}
+
+// ── SAVE ─────────────────────────────────────────────────────────────────────
+function saveAllChanges(){
+  D.siteName=getVal('cfg-siteName')||D.siteName;
+  D.tagline=getVal('cfg-tagline')||D.tagline;
+  D.logoUrl=getVal('cfg-logoUrl');
+  D.primaryColor=getVal('cfg-primaryColorHex')||D.primaryColor;
+  D.loginLink=getVal('cfg-loginLink')||D.loginLink;
+  D.navCta=getVal('cfg-navCta')||D.navCta;
+  D.navCtaLink=getVal('cfg-navCtaLink')||D.navCtaLink;
+  D.heroBadge=getVal('cfg-heroBadge')||D.heroBadge;
+  D.heroH1=getVal('cfg-heroH1')||D.heroH1;
+  D.heroH2=getVal('cfg-heroH2')||D.heroH2;
+  D.heroH3=getVal('cfg-heroH3')||D.heroH3;
+  D.heroSub=getVal('cfg-heroSub')||D.heroSub;
+  D.heroCta1=getVal('cfg-heroCta1')||D.heroCta1;
+  D.heroCta1Link=getVal('cfg-heroCta1Link')||D.heroCta1Link;
+  D.heroCta2=getVal('cfg-heroCta2')||D.heroCta2;
+  D.heroCta2Link=getVal('cfg-heroCta2Link')||D.heroCta2Link;
+  D.heroProof=getVal('cfg-heroProof')||D.heroProof;
+  D.heroCardTitle=getVal('cfg-heroCardTitle')||D.heroCardTitle;
+  D.heroCardText=getVal('cfg-heroCardText')||D.heroCardText;
+  D.featBadge=getVal('cfg-featBadge')||D.featBadge;
+  D.featTitle=getVal('cfg-featTitle')||D.featTitle;
+  D.featSub=getVal('cfg-featSub')||D.featSub;
+  D.stepsBadge=getVal('cfg-stepsBadge')||D.stepsBadge;
+  D.stepsTitle=getVal('cfg-stepsTitle')||D.stepsTitle;
+  D.stepsSub=getVal('cfg-stepsSub')||D.stepsSub;
+  D.testiBadge=getVal('cfg-testiBadge')||D.testiBadge;
+  D.testiTitle=getVal('cfg-testiTitle')||D.testiTitle;
+  D.testiSub=getVal('cfg-testiSub')||D.testiSub;
+  D.priceBadge=getVal('cfg-priceBadge')||D.priceBadge;
+  D.priceTitle=getVal('cfg-priceTitle')||D.priceTitle;
+  D.priceSub=getVal('cfg-priceSub')||D.priceSub;
+  D.priceCtaTitle=getVal('cfg-priceCtaTitle')||D.priceCtaTitle;
+  D.priceCtaText=getVal('cfg-priceCtaText')||D.priceCtaText;
+  D.priceCtaBtn=getVal('cfg-priceCtaBtn')||D.priceCtaBtn;
+  D.priceCtaBtnLink=getVal('cfg-priceCtaBtnLink')||D.priceCtaBtnLink;
+  D.contBadge=getVal('cfg-contBadge')||D.contBadge;
+  D.contTitle=getVal('cfg-contTitle')||D.contTitle;
+  D.contSub=getVal('cfg-contSub')||D.contSub;
+  D.email=getVal('cfg-email')||D.email;
+  D.phone=getVal('cfg-phone')||D.phone;
+  D.address=getVal('cfg-address')||D.address;
+  D.formBtn=getVal('cfg-formBtn')||D.formBtn;
+  D.formSuccess=getVal('cfg-formSuccess')||D.formSuccess;
+  D.footerDesc=getVal('cfg-footerDesc')||D.footerDesc;
+  D.copyright=getVal('cfg-copyright')||D.copyright;
+  D.twitter=getVal('cfg-twitter');D.linkedin=getVal('cfg-linkedin');
+  D.instagram=getVal('cfg-instagram');D.facebook=getVal('cfg-facebook');
+  D.ctaTitle=getVal('cfg-ctaTitle')||D.ctaTitle;
+  D.ctaText=getVal('cfg-ctaText')||D.ctaText;
+  D.ctaBtn=getVal('cfg-ctaBtn')||D.ctaBtn;
+  D.ctaBtnLink=getVal('cfg-ctaBtnLink')||D.ctaBtnLink;
+  // Dynamic
+  document.querySelectorAll('.feat-icon').forEach(function(el){var i=parseInt(el.dataset.i);if(D.features[i])D.features[i].icon=el.value;});
+  document.querySelectorAll('.feat-title').forEach(function(el){var i=parseInt(el.dataset.i);if(D.features[i])D.features[i].title=el.value;});
+  document.querySelectorAll('.feat-desc').forEach(function(el){var i=parseInt(el.dataset.i);if(D.features[i])D.features[i].desc=el.value;});
+  document.querySelectorAll('.step-title').forEach(function(el){var i=parseInt(el.dataset.i);if(D.steps[i])D.steps[i].title=el.value;});
+  document.querySelectorAll('.step-desc').forEach(function(el){var i=parseInt(el.dataset.i);if(D.steps[i])D.steps[i].desc=el.value;});
+  document.querySelectorAll('.testi-name').forEach(function(el){var i=parseInt(el.dataset.i);if(D.testimonials[i])D.testimonials[i].name=el.value;});
+  document.querySelectorAll('.testi-role').forEach(function(el){var i=parseInt(el.dataset.i);if(D.testimonials[i])D.testimonials[i].role=el.value;});
+  document.querySelectorAll('.testi-text').forEach(function(el){var i=parseInt(el.dataset.i);if(D.testimonials[i])D.testimonials[i].text=el.value;});
+  document.querySelectorAll('.plan-name-inp').forEach(function(el){var i=parseInt(el.dataset.i);if(D.plans[i])D.plans[i].name=el.value;});
+  document.querySelectorAll('.plan-desc-inp').forEach(function(el){var i=parseInt(el.dataset.i);if(D.plans[i])D.plans[i].desc=el.value;});
+  document.querySelectorAll('.plan-feat-inp').forEach(function(el){var i=parseInt(el.dataset.i);if(D.plans[i])D.plans[i].features=el.value.split('\n').filter(Boolean);});
+  document.querySelectorAll('.plan-price-inp').forEach(function(el){var i=parseInt(el.dataset.i);if(D.plans[i])D.plans[i].pricing=el.value.split('\n').filter(Boolean);});
+  try{localStorage.setItem('karmahq_data',JSON.stringify(D));}catch(e){}
+  render();
+  showToast('✓ All changes saved!');
+}
+
+function showToast(msg){
+  var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+  setTimeout(function(){t.classList.remove('show');},2800);
+}
+
+// ── ADMIN OPEN/CLOSE ──────────────────────────────────────────────────────────
+function openAdmin(){populateAdmin();document.getElementById('adminModal').classList.add('open');}
+function closeAdmin(){document.getElementById('adminModal').classList.remove('open');}
+
+function switchTab(name){
+  document.querySelectorAll('.admin-tab').forEach(function(b){b.classList.remove('active');});
+  document.querySelectorAll('.admin-section').forEach(function(s){s.classList.remove('active');});
+  event.target.classList.add('active');
+  var sec=document.getElementById('tab-'+name);if(sec)sec.classList.add('active');
+}
+
+// ── LOCK SCREEN ───────────────────────────────────────────────────────────────
+var PASS='hqkarma@321';
+function checkLock(){
+  var v=document.getElementById('lockInput').value;
+  if(v===PASS){hideLock();}
+  else{document.getElementById('lockErr').style.display='block';}
+}
+function hideLock(){document.getElementById('lockScreen').classList.add('hidden');}
+
+// ── MOBILE MENU ───────────────────────────────────────────────────────────────
+function toggleMob(){document.getElementById('mobMenu').classList.toggle('open');}
+function closeMob(){document.getElementById('mobMenu').classList.remove('open');}
+
+// ── SCROLL TO ─────────────────────────────────────────────────────────────────
+function scrollTo(id){var el=document.getElementById(id);if(el){el.scrollIntoView({behavior:'smooth',block:'start'});}}
+
+// ── NAV ACTIVE ────────────────────────────────────────────────────────────────
+window.addEventListener('scroll',function(){
+  var ids=['home','about','how-it-works','testimonials','pricing','contact'];
+  var links=document.querySelectorAll('.nav-links a');
+  var y=window.pageYOffset+100;
+  ids.forEach(function(id){
+    var el=document.getElementById(id);if(!el)return;
+    if(y>=el.offsetTop&&y<el.offsetTop+el.offsetHeight){
+      links.forEach(function(a){a.classList.remove('active');});
+      var al=document.querySelector('.nav-links a[href="#'+id+'"]');if(al)al.classList.add('active');
+    }
+  });
+  // scroll animations
+  document.querySelectorAll('.step-card,.feature-card,.plan-card,.testi-card,.stat-item').forEach(function(el){
+    var rect=el.getBoundingClientRect();
+    if(rect.top<window.innerHeight-60){el.style.opacity='1';el.style.transform='translateY(0)';}
+  });
+});
+
+// ── FORM ──────────────────────────────────────────────────────────────────────
+var selPlanVal='free';
+function selPlan(p){
+  selPlanVal=p;
+  document.getElementById('optFree').classList.toggle('active',p==='free');
+  document.getElementById('optPro').classList.toggle('active',p==='pro');
+}
+function handleForm(e){
+  e.preventDefault();
+  var btn=document.getElementById('formSubmitBtn');
+  btn.textContent='Submitting...';btn.disabled=true;
+  setTimeout(function(){
+    document.getElementById('contactFormBox').innerHTML='<div class="success-box"><div class="success-icon">✓</div><h3 style="font-family:Outfit;font-size:22px;font-weight:900;color:#1b181c;margin-bottom:8px;">We're on it!</h3><p style="font-size:14px;color:#46484d;">'+D.formSuccess+'</p></div>';
+  },1000);
+}
+
+// ── CHAT ──────────────────────────────────────────────────────────────────────
+var chatOpen=false;
+var replies=["Thanks for sharing! Our team will analyze your Reddit opportunities and get back to you shortly.","Great question! KarmaHQ helps brands grow on Reddit through authentic engagement. Would you like to know more?","We'd love to help! Please fill out the contact form or I can pass along your message to our team.","Our Free Plan starts with a basic Reddit Audit Report. The Pro Plan gives detailed analysis + strategy. Which sounds right for you?"];
+function toggleChat(){chatOpen=!chatOpen;document.getElementById('chatPanel').classList.toggle('open',chatOpen);document.getElementById('chatBtn').textContent=chatOpen?'✕':'💬';}
+function sendChat(){
+  var inp=document.getElementById('chatInp');var msg=inp.value.trim();if(!msg)return;
+  var msgs=document.getElementById('chatMsgs');
+  msgs.innerHTML+='<div class="chat-msg user">'+msg+'</div>';inp.value='';msgs.scrollTop=msgs.scrollHeight;
+  setTimeout(function(){
+    msgs.innerHTML+='<div class="chat-msg bot">'+replies[Math.floor(Math.random()*replies.length)]+'</div>';
+    msgs.scrollTop=msgs.scrollHeight;
+  },900);
+}
+
+// ── SCROLL ANIMATIONS INIT ────────────────────────────────────────────────────
+window.addEventListener('load',function(){
+  document.querySelectorAll('.step-card,.feature-card,.plan-card,.stat-item').forEach(function(el){
+    el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .5s ease,transform .5s ease';
+  });
+  render();
+});
+</script>
+</body>
+</html>
